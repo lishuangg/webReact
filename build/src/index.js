@@ -2,19 +2,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ShowTime from './ShowTime';//默认引入js文件，所以.js可以省略
-import Todolist from './Todolist/Todolist';
-import Request from './Request/Request';
-//引入时的组件名字可以更改,默认导出是直接写组件名称，命名导出要加上{}
+
+// import ShowTime from './ShowTime';//默认引入js文件，所以.js可以省略
+// //引入时的组件名字可以更改,默认导出是直接写组件名称，命名导出要加上{}
 
 // //组件交互
 // //父组件 --> 子组件：调用时在子组件上添加属性，在子组件中通过props获取数据
 // ReactDOM.render(<ShowTime word="react"/>,document.getElementById('root'));
 
+// import Todolist from './Todolist/Todolist';
 // ReactDOM.render(<Todolist/>,document.getElementById('root'));
 
-ReactDOM.render(<Request/>,document.getElementById('root'));
+// import Request from './Request/Request';
+// ReactDOM.render(<Request/>,document.getElementById('root'));
 
+// import Parent from './Context/Parent';
+// // let {Provider,Consumer} = React.createContext();
+// import {con} from './Context/Context';//跨文件需要导入导出
+// let color = 'red';
+// ReactDOM.render(
+//     <con.Provider value={color}>
+//         <Parent />
+//     </con.Provider>,document.getElementById('root'));
+
+import Hoc from './Hoc/Hoc';
+ReactDOM.render(<Hoc/>,document.getElementById('root'));
 
 // import App from './App';
 // ReactDOM.render(<App />, document.getElementById('root'));
