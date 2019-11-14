@@ -8,6 +8,7 @@ import linggan3 from "../images/linggan3.jpg";
 import linggan4 from "../images/linggan4.jpg";
 import linggan5 from "../images/linggan5.jpg";
 import linggan6 from "../images/linggan6.jpg";
+import xin from "../images/xin.png";
 
 const photo = [`${linggan1}`,`${linggan2}`,`${linggan3}`,`${linggan4}`,`${linggan5}`,`${linggan6}`]
 const text = ['橙色律动','儿童房','翻滚吧，地毯君','角落里的遐想','橙色律动','橙色律动']
@@ -34,10 +35,11 @@ export default class Inspiration extends Component {
                 <Tabs tabs={tabs} initialPage={0}>
                     <Grid data={data} hasLine={false} square={false} columnNum={2} renderItem={dataItem => (
                         <div style={{margin:"10px"}}>
-                            <img src={dataItem.icon} style={{ width: '100%'}} alt="" />
-                            <div style={{width:"100%",backgroundColor:"#fff",color:"#000",textAlign:"left",padding:"5px"}}>
-                                <img src={dataItem.icon} style={{width:"20%",borderRadius:"50%"}} alt="" />
-                                <span>{dataItem.text}</span>
+                            <img src={dataItem.icon} style={{width:'100%',borderRadius:"5px"}} alt="" />
+                            <div style={{width:"100%",backgroundColor:"#fff",fontSize:"10px",color:"#000",textAlign:"left",padding:"0 5px"}}>
+                                <img src={dataItem.icon} style={{position:"absolute",left:"5%",bottom:"0",width:"20%",borderRadius:"50%"}} alt="" />
+                                <span style={{position:"absolute",left:"25%",bottom:"0"}}>{dataItem.text}</span>
+                                <img src={`${xin}`} style={{width:"15%",float:"right"}}/>
                             </div>
                         </div>  
                     )}/>

@@ -107,7 +107,7 @@ export default class TabBarExample extends React.Component {
               onPress={() => {
                 this.setState({
                   selectedTab: 'greenTab',
-                  nav: '灵感',
+                  nav: '商城',
                   pic: `${gouwu}`
                 });
               }}>
